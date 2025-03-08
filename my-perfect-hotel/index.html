@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <base href="https://cdn.jsdelivr.net/gh/genizy/braybray/my-perfect-hotel/">
+  <base href="https://cdn.jsdelivr.net/gh/genizy/braybray@74e044bc1b240fdd8b70ef6acaa0af81138f585e/my-perfect-hotel/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="24123002/theme/game.css">
   <meta name="robots" content="noindex, nofollow">
@@ -97,7 +97,14 @@
     };
     config.gameId = "perfect-hotel";
   </script>
-  <script id="gmsoft-jssdk" src="gmsoftsdk_v4.js"></script>
+  <script>
+	if ('serviceWorker' in navigator) {
+	  navigator.serviceWorker.register('/sw.js')
+		.then(() => console.log('Service Worker Registered'))
+		.catch(err => console.log('Service Worker Failed', err));
+	}
+  </script>
+  <script id="gmsoft-jssdk" src="https://cdn.jsdelivr.net/gh/genizy/braybray@74e044bc1b240fdd8b70ef6acaa0af81138f585e/my-perfect-hotel/gmsoftsdk_v4.js"></script>
 </head>
 
 <body>
