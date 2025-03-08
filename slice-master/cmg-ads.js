@@ -367,15 +367,15 @@ function clearGameInterstitialAdTimer() {
 
 function init() {
   var script = document.createElement("script");
-  script.src = "https://cdn.intergi.com/prebid/cmg-prebid.js";
+  script.src = "cmg-prebid.js";
   script.async = false;
   document.head.appendChild(script);
   var script2 = document.createElement("script");
-  script2.src = "https://cdn.intergi.com/cmg/cmg-headerbidding.js";
+  script2.src = "cmg-headerbidding.js";
   script2.async = false;
   document.head.appendChild(script2);
   var script3 = document.createElement("script");
-  script3.src = "https://imasdk.googleapis.com/js/sdkloader/ima3_debug.js";
+  script3.src = "ima3_debug.js";
   script3.async = false;
   document.head.appendChild(script3);
   console.log("cmgAdBreak initialized");
