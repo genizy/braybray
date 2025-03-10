@@ -22,7 +22,7 @@ var loadModules = function (modules, urlPrefix, doneCallback) { // eslint-disabl
             throw new Error('failed to load ' + url);
         };
         tag.async = true;
-        tag.src = (""+url).startsWith("http") ? url : "https://cdn.jsdelivr.net/gh/genizy/braybray@f99fd8b6b3aa74b4912a2f6cabbda4374b4f1cadf99fd8b6b3aa74b4912a2f6cabbda4374b4f1cad/crazy-cars/"+url;
+        tag.src = (""+url).startsWith("http") ? url : "https://cdn.jsdelivr.net/gh/genizy/braybray@5d09ade90c4dbf15a9752d65b5bcdabeaffb70af/crazy-cars/"+url;
         tag.crossOrigin = 'anonymous';
         document.head.appendChild(tag);
     }

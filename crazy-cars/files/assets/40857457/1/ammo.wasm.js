@@ -201,7 +201,7 @@ var Ammo = (function() {
           return sa || !ca && !da || "function" !== typeof fetch ? new Promise(function(a) {
               a(Ta())
           }
-          ) : fetch(Ra.startsWith("http") ? Ra : "https://cdn.jsdelivr.net/gh/genizy/braybray@f99fd8b6b3aa74b4912a2f6cabbda4374b4f1cad/crazy-cars/"+Ra, {
+          ) : fetch(Ra.startsWith("http") ? Ra : "https://cdn.jsdelivr.net/gh/genizy/braybray@5d09ade90c4dbf15a9752d65b5bcdabeaffb70af/crazy-cars/"+Ra, {
               credentials: "same-origin"
           }).then(function(a) {
               if (!a.ok)
@@ -353,7 +353,7 @@ var Ammo = (function() {
           (function() {
               if (sa || "function" !== typeof WebAssembly.instantiateStreaming || Qa() || "function" !== typeof fetch)
                   return d(c);
-              fetch(Ra.startsWith("http") ? Ra : "https://cdn.jsdelivr.net/gh/genizy/braybray@f99fd8b6b3aa74b4912a2f6cabbda4374b4f1cad/crazy-cars/"+Ra, {
+              fetch(Ra.startsWith("http") ? Ra : "https://cdn.jsdelivr.net/gh/genizy/braybray@5d09ade90c4dbf15a9752d65b5bcdabeaffb70af/crazy-cars/"+Ra, {
                   credentials: "same-origin"
               }).then(function(f) {
                   return WebAssembly.instantiateStreaming(f, e).then(c, function(m) {
