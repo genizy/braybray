@@ -78,7 +78,7 @@
 		window.PokiSDK[e] = t.oneArgument(e)
 	}));
 	var r = document.createElement("script");
-	r.setAttribute("src", "https://cdn.jsdelivr.net/gh/genizy/braybray@40954b39320c605cb41798e3f249f02b22fba835/crazy-cars/poki-sdk-core-v2.263.0.js"), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"), r.onload = function() {
+	r.setAttribute("src", "https://cdn.jsdelivr.net/gh/genizy/braybray@f99fd8b6b3aa74b4912a2f6cabbda4374b4f1cad/crazy-cars/poki-sdk-core-v2.263.0.js"), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"), r.onload = function() {
 		return t.dequeue()
 	}, document.head.appendChild(r)
 })();
