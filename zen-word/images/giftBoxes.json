@@ -1,0 +1,19 @@
+{"frames":{
+
+"giftBoxOpened.png":
+{
+	"frame":{"x":0,"y":0,"w":89,"h":82},
+	"rotated":false,
+	"trimmed":false,
+	"spriteSourceSize":{"x":0,"y":0,"w":89,"y":82},
+	"sourceSize":{"w":89,"h":82}
+},
+"giftBoxClosed.png":
+{
+	"frame":{"x":90,"y":0,"w":58,"h":67},
+	"rotated":false,
+	"trimmed":false,
+	"spriteSourceSize":{"x":0,"y":0,"w":58,"y":67},
+	"sourceSize":{"w":58,"h":67}
+}
+}}
