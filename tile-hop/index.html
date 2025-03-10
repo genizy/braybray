@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tiles Hop 3D</title>
+<link rel="stylesheet" href="https://loader.vseigru.net/mob/gameloader.css" />
+perfect-hotel/index.html
+<script src="gameloader.js"></script>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://slope-game.github.io/tiles-hop-3d.html">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script>
+ function FitScreen(){
+       var w=480;
+       var h=600;
+       var availWidth=window.innerWidth;
+       var availHeight=window.innerHeight-45;
+     
+       var canvas = document.getElementById("#canvas");
+       if(availWidth/availHeight>w/h){
+         height = availHeight;
+         width = (height*w/h);
+      }else{
+         width = availWidth;
+         height = width*h/w;
+      }
+      canvas.width = width;
+      canvas.height = height;
+	  var firstDiv = document.getElementsByTagName('div')[0];
+	  var gameContainer = document.getElementById("game-container");
+      firstDiv.style.width=width + "px";
+      firstDiv.style.height=(height + 45) + "px";
+	  firstDiv.style.margin = "0 auto";
+      gameContainer.style.width=width + "px";
+      gameContainer.style.height=height + "px";	
+}	   
+</script>
+</head>
+<body onfocus="FitScreen();" onload="FitScreen();" onresize="FitScreen();">
+<script type="text/javascript">
+      var options = {
+        author: "Vseigru",        
+		logo: "logo.jpg",
+        gameName: "Tiles Hop 3D",
+        gameUrl: "/",
+        moreLink: ("http://vseigru.net"),
+        allowFullscreen: false,
+        locale: "ru_RU",
+        loader: "5.6.x",
+        loaderOptions: {"moduleJsonUrl": "Build/GD.json", "unityLoaderUrl": "Build/UnityLoader.js"},
+      };
+      GameInit.load(options);
+    </script>
+</body>
+</html>
