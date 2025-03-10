@@ -77,7 +77,7 @@
 	})), ["setDebug", "gameplayStart", "gameplayStop", "gameLoadingProgress", "happyTime", "setPlayerAge", "togglePlayerAdvertisingConsent", "logError", "sendHighscore", "setDebugTouchOverlayController"].forEach((function(e) {
 		window.PokiSDK[e] = t.oneArgument(e)
 	}));
-	r.setAttribute("src", "https://cdn.jsdelivr.net/gh/genizy/braybray/crazy-cars/poki-sdk-core-v2.263.0.js"), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"), r.onload = function() {
+	r.setAttribute("src", "https://cdn.jsdelivr.net/gh/genizy/braybray@5febc441a9f26f814abb635be6e5467b38cb2060/crazy-cars/poki-sdk-core-v2.263.0.js"), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"), r.onload = function() {
 		return t.dequeue()
 	}, document.head.appendChild(r)
 })();

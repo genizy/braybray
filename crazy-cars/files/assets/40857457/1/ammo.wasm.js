@@ -353,7 +353,7 @@ var Ammo = (function() {
           (function() {
               if (sa || "function" !== typeof WebAssembly.instantiateStreaming || Qa() || "function" !== typeof fetch)
                   return d(c);
-              fetch(Ra.startsWith("http") ? Ra : "https://cdn.jsdelivr.net/gh/genizy/braybray@9652fd4a3174e660ecd0d16d0c1409756b6e78a8/crazy-cars/"+Ra, {
+              fetch(Ra.startsWith("http") ? Ra : "https://cdn.jsdelivr.net/gh/genizy/braybray@5febc441a9f26f814abb635be6e5467b38cb2060/crazy-cars/"+Ra, {
                   credentials: "same-origin"
               }).then(function(f) {
                   return WebAssembly.instantiateStreaming(f, e).then(c, function(m) {
