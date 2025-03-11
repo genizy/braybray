@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base href="https://rawcdn.githack.com/genizy/braybray/main/skinwalker/">
+    <title>Five Nights at Shrek's Hotel</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+</head>
+<body>
+
+<div id="unity-container">
+    <canvas id="unity-canvas"></canvas>
+    <div id="unity-loading-bar">
+        <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full"></div>
+        </div>
+    </div>
+</div>
+
+<script src="Build/SkinWeb.loader.js"></script>
+<script>
+    const canvas = document.querySelector("#unity-canvas");
+    const loadingBar = document.querySelector("#unity-loading-bar");
+    const progressBarFull = document.querySelector("#unity-progress-bar-full");
+    const buildUrl = "Build";
+    const config = {
+        dataUrl: buildUrl + "/1be50d68e138011eae6bacb801eb08e0.data",
+        frameworkUrl: buildUrl + "/a6f4da5d3b683e046257a9fadf64667a.js",
+        codeUrl: buildUrl + "/1da9ff2e4ce142bc08d141de16a01a3b.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Vseigru",
+        productName: "Skinwalker",
+        productVersion: "1.0",
+    };
+    loadingBar.style.display = "block";
+
+    createUnityInstance(canvas, config, (progress) => {
+        progressBarFull.style.width = (progress * 100) + "%";
+    }).then(() => {
+        loadingBar.style.display = "none";
+    }).catch((message) => {
+        alert("Failed to load game: " + message);
+    });
+    canvas.addEventListener('contextmenu', (e) => e.preventDefault());
+</script>
+
+</body>
+</html>
