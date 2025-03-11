@@ -1,0 +1,9 @@
+{
+    "dataUrl": "https://cdn.jsdelivr.net/gh/genizy/braybray/fnas-hotel2/SREK.data.unityweb",
+    "frameworkUrl": "https://cdn.jsdelivr.net/gh/genizy/braybray/fnas-hotel2/SREK.framework.js.unityweb",
+    "codeUrl": "https://cdn.jsdelivr.net/gh/genizy/braybray/fnas-hotel2/SREK.wasm.unityweb",
+    "streamingAssetsUrl": "https://cdn.jsdelivr.net/gh/genizy/braybray/fnas-hotel2/StreamingAssets",
+    "companyName": "Evony Games",
+    "productName": "Five Nights at Shreks Hotel",
+    "productVersion": "0.1"
+}
