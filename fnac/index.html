@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base href="https://rawcdn.githack.com/genizy/braybray/2fca5187ab8cf3646bcfa5fc8bf90fbf9bd04df1/fnac/">
+    <title>Five Nights at Christmas</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+</head>
+<body>
+
+<div id="unity-container">
+    <canvas id="unity-canvas"></canvas>
+    <div id="unity-loading-bar">
+        <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full"></div>
+        </div>
+    </div>
+</div>
+
+<script src="Build/Five Night at chrismtas.loader.js"></script>
+<script>
+    const canvas = document.querySelector("#unity-canvas");
+    const loadingBar = document.querySelector("#unity-loading-bar");
+    const progressBarFull = document.querySelector("#unity-progress-bar-full");
+    const buildUrl = "Build";
+    const config = {
+        dataUrl: buildUrl + "/07418380c70913323bc52ba9a59e3379.data",
+        frameworkUrl: buildUrl + "/d254537f475589c2aaf64ed193a6e587.js",
+        codeUrl: buildUrl + "/e6ad474954827bf78fc597a59fd6ce04.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Nishad",
+        productName: "Five Night - Christmas",
+        productVersion: "0.1.0",
+    };
+    loadingBar.style.display = "block";
+
+    createUnityInstance(canvas, config, (progress) => {
+        progressBarFull.style.width = (progress * 100) + "%";
+    }).then(() => {
+        loadingBar.style.display = "none";
+    }).catch((message) => {
+        alert("Failed to load game: " + message);
+    });
+    canvas.addEventListener('contextmenu', (e) => e.preventDefault());
+</script>
+
+</body>
+</html>
